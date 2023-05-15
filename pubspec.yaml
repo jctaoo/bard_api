@@ -1,10 +1,10 @@
 name: bard_api
-description: A starting point for Dart libraries or applications.
+description: Reverse engineering of Google's Bard chatbot API.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/jctaoo/bard_api
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: ">=2.19.6 <3.0.0"
 
 # dependencies:
 #   path: ^1.8.0
