@@ -108,7 +108,7 @@ class ChatBot {
     }
     final jsonChatData = json.decode(chatData);
     final results = {
-      "content": jsonChatData[0][0],
+      "content": jsonChatData[4][0][1][0],
       "conversation_id": jsonChatData[1][0],
       "response_id": jsonChatData[1][1],
       "factualityQueries": jsonChatData[3],
