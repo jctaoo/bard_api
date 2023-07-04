@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
+import 'package:bard_api/bard_api.dart';
+
 class ChatBot {
   int _reqId = Random().nextInt(pow(10, 4).toInt());
   String _conversationId = "";
@@ -70,7 +72,7 @@ class ChatBot {
     return SNlM0e;
   }
 
-  Future<Map<String, dynamic>> ask(String question) async {
+  Future<BardResponse> ask(String question) async {
     if (_SNLM0e == null) {
       await _initialize();
     }
@@ -121,6 +123,6 @@ class ChatBot {
     _choiceId = results["choices"][0]["id"];
     _reqId += 100000;
 
-    return results;
+    return BardResponse.fromMap(results);
   }
 }
